@@ -1,5 +1,6 @@
 import React from 'react';
 import Colors from './Colors';
+import HookContador from './HookContador';
 
 function Feed(props) {
     const showAlert = () =>{
@@ -14,7 +15,7 @@ function Feed(props) {
             <img src={props.img} alt="" height="200" width="300" />
             <h3 style={style.title}>{props.title}</h3>
             <p>{props.detail}</p>
-            <Colors show = {showAlert} color={props.color}></Colors>
+            <Colors show = {showAlert} color={props.color} contador= {<HookContador></HookContador>}></Colors>
             <Hello title = "Bienvenido desde otro componente!"/>
         </div>
     );
